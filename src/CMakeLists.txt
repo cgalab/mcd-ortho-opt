@@ -18,13 +18,13 @@ set(SOURCES decomp.cpp file_io.cpp main.cpp mesh.cpp view.cpp)
 set(UIS mcd-trap-decomp.ui)
 set(RESOURCES mcd-trap-decomp.qrc)
 
-add_executable(mcd-trap-decomp ${SOURCES} ${UIS} ${RESOURCES})
+add_executable(mcd-ortho-opt ${SOURCES} ${UIS} ${RESOURCES})
 
-set_target_properties(mcd-trap-decomp PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
+set_target_properties(mcd-ortho-opt PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
 
-target_link_libraries(mcd-trap-decomp Boost::program_options)
-target_link_libraries(mcd-trap-decomp jsoncpp)
-target_link_libraries(mcd-ref-merge triangle)
+target_link_libraries(mcd-ortho-opt Boost::program_options)
+target_link_libraries(mcd-ortho-opt jsoncpp)
+target_link_libraries(mcd-ortho-opt triangle)
 
 if(BUILD_VIEW)
     target_link_libraries(mcd-trap-decomp CGAL::CGAL CGAL::CGAL_Core CGAL::CGAL_Qt5)
